@@ -1,0 +1,6 @@
+Waf: Entering directory `/home/jay/Courses/ensc894/ns-allinone-3.33/ns-3.33/build'
+[2233/2281] Compiling scratch/satcom-bulk-sim-test.cc
+[2241/2281] Linking build/scratch/satcom-bulk-sim-test
+Waf: Leaving directory `/home/jay/Courses/ensc894/ns-allinone-3.33/ns-3.33/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (3.978s)

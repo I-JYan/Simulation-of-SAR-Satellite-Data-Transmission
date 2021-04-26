@@ -1,0 +1,24 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('satcom', ['core', 'mobility', 'network', 'csma', 'point-to-point', 'internet', 'applications', 'flow-monitor', 'netanim'])
+    module.source = [
+        'model/mobility/sar-orbit-mobility-model.cc',
+        'model/mobility/calculatedistance.cc',
+        ]
+
+    module_test = bld.create_ns3_module_test_library('satcom-test')
+    module_test.source = []
+
+    headers = bld(features='ns3header')
+    headers.module = 'satcom'
+    headers.source = [
+        'model/mobility/sar-orbit-mobility-model.h',
+        'model/mobility/calculatedistance.h',
+        ]
+
+    if bld.env.ENABLE_EXAMPLES:
+        bld.recurse('examples')
+
+    # bld.ns3_python_bindings()
+
